@@ -1,7 +1,7 @@
 import React from 'react'
 function Header() {
   return (
-    <div className='flex fixed top-0 right-0 left-0 w-10/12 m-auto justify-between items-center mt-5 p-5 bg-white rounded-2xl '>
+    <div className='flex z-100 fixed top-0 right-0 left-0 w-10/12 m-auto justify-between items-center mt-5 p-5 bg-white rounded-2xl '>
         <img src='/images/homeLogo.png' />
         <ul className='flex gap-10'>
             <li>

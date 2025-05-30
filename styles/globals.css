@@ -1,4 +1,8 @@
 @import "tailwindcss";
 *{
     direction: rtl;
+    
+}
+body{
+    background-color: rgb(244, 243, 243);
 }
