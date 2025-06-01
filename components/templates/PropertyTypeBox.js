@@ -1,7 +1,9 @@
+import Link from 'next/link'
 import React from 'react'
 
 function PropertyTypeBox({type}) {
   return (
+  
     <div className={`bg-[url(${type.img})] relative h-[300px] bg-contain w-1/3 bg-no-repeat`}>
       <div className='bg-white p-2 rounded-xl flex justify-between items-center w-11/12 right-0 left-0 m-auto absolute bottom-2'>
         
@@ -18,6 +20,7 @@ function PropertyTypeBox({type}) {
       </div>
       
     </div>
+  
   )
 }
 
