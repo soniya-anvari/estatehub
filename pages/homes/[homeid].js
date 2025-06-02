@@ -6,18 +6,17 @@ function HomeDetails() {
     const router = useRouter();
     const {homeid}=router.query;
     const home=homes[homeid-1];
-    console.log(home)
   return (
     <div className='pt-40 w-10/12 m-auto'>
       <div className='flex gap-4'>
-        {home.images.length>0 && home.images.map((image,index)=>(
+        {home?.images?.length>0 && home.images.map((image,index)=>(
         <img key={index} src={image} className='w-1/3'/>
       ))}
       </div>
       <div className='flex gap-10 mt-5' >
         <div className='w-2/3 flex flex-col gap-2'>
             <p>
-            {home.name } {" - "}{home.details}
+            {home?.name } {" - "}{home?.details}
         </p>
           <div className='flex gap-1 items-center'>
             <span className='pt-1 inline-block'>
@@ -27,26 +26,26 @@ function HomeDetails() {
                     </svg>
             </span>
             <p className='text-gray-500 text-sm'>
-                {home.location}
+                {home?.location}
             </p>
         </div>
         <p>
-            رهن {" "} {home.mortgage} <span className='text-sm text-gray-500'>تومان</span>
+            رهن {" "} {home?.mortgage} <span className='text-sm text-gray-500'>تومان</span>
         </p>
         <p>
-            اجاره {" "} {home.rent}  <span className='text-sm text-gray-500'>تومان</span>
+            اجاره {" "} {home?.rent}  <span className='text-sm text-gray-500'>تومان</span>
         </p>
       
         </div>
           <div className='w-1/3 border border-gray-300 rounded-xl p-4 '>
                 <div className='flex items-center gap-2 justify-center'>
-                    <img src={home.owner.photo} className='w-[80px]' />
+                    <img src={home?.owner?.photo} className='w-[80px]' />
                 <div>
                     <p className='text-xl font-bold'>
-                        {home.owner.name}
+                        {home?.owner?.name}
                     </p>
                      <p className='text-sm text-gray-400'>
-                        {home.owner.phone}
+                        {home?.owner?.phone}
                     </p>
                 </div>
                 </div>
@@ -75,7 +74,7 @@ function HomeDetails() {
                     درخواست بازدید
                 </button>
             </div>
-        
+
       </div>
       <div className='mt-14'>
         <Feature home={home} />

@@ -18,17 +18,17 @@ function Feature({home}) {
           <div className='grid grid-cols-3'>
             <p className='text-gray-500'>مساحت زیر بنا:
             <span className='text-black'>
-              {home.area} متر
+              {home?.area} متر
             </span>
           </p>
           <p className='text-gray-500'>  طبقات:
             <span className='text-black'>
-              {home.floor}
+              {home?.floor}
             </span>
           </p>
            <p className='text-gray-500'>  سرویس بهداشتی:
             <span className='text-black'>
-              {home.bathrooms} عدد
+              {home?.bathrooms} عدد
             </span>
           </p>
           </div>
@@ -47,7 +47,7 @@ function Feature({home}) {
         <div className='mt-5'>
           <p className='border-b-2 border-blue-400 py-2 w-fit'>توضیحات</p>
           <p className='mt-2 text-gray-500'>
-            {home.description}
+            {home?.description}
           </p>
         </div>
       

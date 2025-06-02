@@ -2,7 +2,6 @@ import Link from 'next/link'
 import React from 'react'
 
 function MostVisitedBox({home}) {
-    console.log(home)
   return (
     <Link href={`/homes/${home.id}`} className='bg-white rounded-2xl '>
       <img className='w-full rounded-2xl' src={home.img} />
