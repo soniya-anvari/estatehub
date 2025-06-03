@@ -19,24 +19,34 @@ function Homes() {
     console.log({allHomes})
   };
   const filtersHandler=(filterTitle)=>{
+    const filterHomes=[];
     if (filterTitle=='Most-up-to-date'){
       setFilter('Most-up-to-date')
-      
     }
-    else if (filterTitle=='most-expensive')
+    else if (filterTitle=='most-expensive'){
+      const x=allHomes.sort((a,b)=>Number(b.rent)-Number(a.rent))
+      setAllHomes(x)
+            console.log(x)
+    
       setFilter('most-expensive')
-    else 
-    setFilter('cheapest');
+    }
+    else {
+      const x=allHomes.sort((a,b)=>Number(a.rent)-Number(b.rent));
+      console.log(x)
+      setAllHomes(x)
+      setFilter('cheapest');
+    }
      
   }
 
+ 
   return (
     <div className='pt-40 w-10/12 m-auto'>
-      <h3>
+      <h3 className='text-xl font-bold'>
         رهن و اجاره آپارتمان در تهران
       </h3>
-      <input placeholder='جستجو' onChange={searchHandler} />
-      <div className='flex gap-5'>
+      <input placeholder='جستجو' onChange={searchHandler} className='my-4 border border-gray-300 rounded-xl pt-2 pb-3 px-6' />
+      <div className='flex gap-5 my-7'>
         <p onClick={()=>filtersHandler('Most-up-to-date')} className={`${filter=='Most-up-to-date' && 'text-blue-500 font-bold'}`}>
               بروز ترین
         </p>

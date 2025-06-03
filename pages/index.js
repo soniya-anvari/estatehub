@@ -17,7 +17,7 @@ export default function Home() {
             <PropertyType />
           </div>
         </div>
-        <div className="w-10/12 m-auto "> 
+        <div className="w-11/12 md:w-10/12 m-auto "> 
           <div className="mt-14">
             <MostVisited />
           </div>

@@ -3,8 +3,8 @@ import React from 'react'
 function Loan() {
   return (
     <div className='bg-black/80 rounded-3xl px-10 flex justify-between'>
-        <div className='text-white flex flex-col gap-5 items-center justify-center'>
-            <p className='text-3xl font-bold'>
+        <div className='text-white flex flex-col py-5 md:py-0 gap-5 items-center justify-center'>
+            <p className='text-3xl font-bold '>
                 برای دریافت وام رهن خانه کلیک کنید
             </p>
             <p className='text-gray-300'>
@@ -14,7 +14,7 @@ function Loan() {
             اطلاعات بیشتر...
         </button>
         </div>
-       <div>
+       <div className='hidden md:flex'>
         <img src='/images/man_pic.png' />
        </div>
     </div>

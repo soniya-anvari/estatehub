@@ -25,7 +25,7 @@ function Services() {
       <h4 className='text-2xl text-center font-bold'>
         با خدمات <span className='text-blue-500'>رنتی‌فای</span> آشنا شوید
       </h4>
-      <div className='flex gap-10 mt-10'>
+      <div className='flex flex-col md:flex-row gap-10 mt-10'>
         {services.map(service=>(
             <ServicesBox key={service.id} service={service} />
         ))}
